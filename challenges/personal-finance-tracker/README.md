@@ -9,7 +9,9 @@ Tracking your purchases against a budget is an important step towards achieving 
    - Item name: The item that was purchased (e.g., "Auto Loan Payment", "Chicken breast", etc.). This is a string.
    - Item category: What category the item belongs to (e.g. "Groceries" if the item name is "Chicken breast"). This is a string.
    - Amount: The price of the item that was purchased. This is a decimal with two points of precision (e.g., $5.99).
- - Write any transactions entered to a general ledger. You can find an example under `sample-data/GeneralLedger.json`.
+ - Write any transactions entered to a general ledger. 
+   - This will be written to a file on disk (not using a database).
+   - You can find an example under `sample-data/GeneralLedger.json`.
    - All items written to the general ledger should include the three arguments _and_ an insert timestamp that logs when the item was written to the general ledger.
  - Create a script that will ingest all the data from the general ledger and will output a summary that will accept the following flags:
    - `--category` or `-c`: The item category.
